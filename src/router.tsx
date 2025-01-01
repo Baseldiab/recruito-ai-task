@@ -6,16 +6,23 @@ import { Layout } from "@/components/layout/layout";
 import ErrorElementPage from "@/pages/errorPage";
 import { HomePage } from "@/pages/homePage";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      errorElement: <ErrorElementPage />,
+      element: <Layout />,
+      children: [
+        {
+          path: "",
+          element: <HomePage />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    errorElement: <ErrorElementPage />,
-    element: <Layout />,
-    children: [
-      {
-        path: "",
-        element: <HomePage />,
-      },
-    ],
-  },
-]);
+    future: {
+      v7_startTransition: false,
+    },
+  }
+);

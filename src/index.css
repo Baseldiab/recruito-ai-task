@@ -5,3 +5,7 @@
 .container {
   @apply lg:w-[1180px] sm:w-[90%] w-[95%] mx-auto;
 }
+
+.default-text {
+  @apply sm:text-base text-sm;
+}
