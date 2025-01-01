@@ -4,7 +4,7 @@ export function HomePage() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Dashboard</CardTitle>
+        <CardTitle>Home page</CardTitle>
       </CardHeader>
       <CardContent>
         <p>Protected content - only visible to authenticated users.</p>
