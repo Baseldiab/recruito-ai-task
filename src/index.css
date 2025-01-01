@@ -7,5 +7,5 @@
 }
 
 .default-text {
-  @apply sm:text-base text-sm;
+  @apply md:text-lg sm:text-base text-sm;
 }
