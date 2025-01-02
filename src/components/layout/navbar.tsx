@@ -26,7 +26,7 @@ export function Navbar() {
   const navItems: NavbarItem[] = [
     {
       text: "Home",
-      href: "#home",
+      href: "#",
       disabled: false,
     },
     {
@@ -51,13 +51,16 @@ export function Navbar() {
 
   return (
     <nav
-      className={`container bg-white fixed sm:top-10 top-6 left-1/2 -translate-x-1/2 z-50 
+      className={`container bg-white fixed sm:top-8 top-5 left-1/2 -translate-x-1/2 z-50 
         transition-[border-radius] duration-300 ease-in-out
         ${isOpen ? "rounded-t-navbar" : "rounded-navbar"}`}
     >
       <div className="flex justify-between items-center p-3 md:px-4 px-3">
         {/* Logo */}
-        <a href="#home">
+        <a
+          href="#
+        "
+        >
           <LogoIcon className="md:!w-28 sm:w-28 w-20 md:h-6 h-6 min-h-full" />
         </a>
 

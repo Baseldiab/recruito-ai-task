@@ -15,6 +15,7 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
         navbar: '40px',
+        section: "30px"
       },
       fontSize: {
         header: "54px",
@@ -25,7 +26,14 @@ export default {
         title: "54px",
       },
       colors: {
-        background: 'hsl(var(--background))',
+        background: {
+          DEFAULT: 'hsl(var(--background))',
+        secondary: " #CFD8E34D"
+        },
+        text: {
+          main: "#0B1928",
+          secondary: "#3E4757"
+        },
         foreground: 'hsl(var(--foreground))',
         card: {
           DEFAULT: 'hsl(var(--card))',
@@ -69,10 +77,7 @@ export default {
           4: 'hsl(var(--chart-4))',
           5: 'hsl(var(--chart-5))',
         },
-        text: {
-          main: "#0B1928",
-          secondary: "#3E4757"
-        },
+     
       },
       keyframes: {
         'accordion-down': {

@@ -14,8 +14,8 @@ import CustomButton from "@/components/buttons/customButton";
 export default function HeaderSections() {
   return (
     <header
-      id="home"
-      className="lg:h-[857px] h-screen relative"
+      // id="home"
+      className="lg:h-[857px] sm:h-[600px] h-[500px] relative"
       style={{
         backgroundImage: `url(${headerBg})`,
         backgroundSize: "cover",
@@ -24,8 +24,8 @@ export default function HeaderSections() {
       }}
     >
       {/* Header content */}
-      <div className="container sm:pt-[218px] pt-[140px]  lg:max-w-[65%] xl:w-[50%] md:max-w-[70%]  w-[90%] mx-auto text-center ">
-        <h1 className=" lg:text-header lg:leading-header md:leading-title sm:text-title text-4xl font-semibold text-text-main ">
+      <div className="container lg:pt-[218px] pt-[140px]  lg:max-w-[65%] xl:w-[50%] md:max-w-[70%]  w-[90%] mx-auto text-center ">
+        <h1 className=" lg:text-header lg:leading-header md:leading-title sm:text-title text-3xl font-semibold text-text-main ">
           Revolutionize Your Hiring Process with
           <span className="text-gradient relative ms-1">
             Recruito AI
@@ -37,19 +37,19 @@ export default function HeaderSections() {
           Your fully automated hiring assistant that sources, screens, and
           interviews candidates effortlessly
         </p>
-      </div>
 
-      {/* Buttons */}
-      <div className="flex justify-center items-center mt-10 gap-4">
-        <CustomButton className="flex justify-center items-center gap-2 capitalize py-2 !px-6 !text-sm font-semibold border border-border-primary !shadow-none  text-text-main">
-          Start Your Free Trial
-        </CustomButton>
+        {/* Buttons */}
+        <div className="flex justify-center items-center mt-10 gap-4">
+          <CustomButton className="flex justify-center items-center gap-2 capitalize !py-2 sm:!px-6 !px-4 sm:!text-sm !text-xs font-semibold border border-border-primary !shadow-none  text-text-main">
+            Start Your Free Trial
+          </CustomButton>
 
-        <MainButton className="flex justify-center items-center gap-2 capitalize py-2 !px-6 !text-sm font-semibold">
-          {" "}
-          <StarIcon className="w-4 h-4 !text-white !fill-white" /> Request a
-          demo
-        </MainButton>
+          <MainButton className="flex justify-center items-center gap-2 capitalize !py-2 sm:!px-6 !px-4 sm:text-sm text-xs font-semibold">
+            {" "}
+            <StarIcon className="w-4 h-4 !text-white !fill-white" /> Request a
+            demo
+          </MainButton>
+        </div>
       </div>
 
       {/* Background squares at top left and bottom right */}
