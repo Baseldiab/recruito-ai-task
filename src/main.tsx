@@ -3,7 +3,6 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import { AppProvider } from "./providers/app-provider";
 import { router } from "./router";
-import "./lib/i18n";
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
