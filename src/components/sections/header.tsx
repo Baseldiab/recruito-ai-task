@@ -1,3 +1,6 @@
+// lib
+import { cn } from "@/lib/utils";
+
 // assets
 import headerBg from "@/assets/header/header-static-bg.webp";
 import headerRightBg from "@/assets/header/header-right-square-bg.webp";
@@ -11,11 +14,15 @@ import StarIcon from "@/components/icons/starIcon";
 import MainButton from "@/components/buttons/mainButton";
 import CustomButton from "@/components/buttons/customButton";
 
-export default function HeaderSections() {
+interface HeaderSectionsProps {
+  className?: string;
+}
+
+export default function HeaderSections({ className }: HeaderSectionsProps) {
   return (
     <header
       id="home"
-      className="lg:h-[857px] sm:h-[600px] h-[500px] relative"
+      className={cn("lg:h-[857px] sm:h-[600px] h-[500px] relative", className)}
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%), url(${headerBg})`,
         backgroundSize: "cover",

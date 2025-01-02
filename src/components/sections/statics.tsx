@@ -1,3 +1,6 @@
+// lib
+import { cn } from "@/lib/utils";
+
 // assets
 import staticsImg from "@/assets/statics/statics-section-center.webp";
 import staticsLeftCard from "@/assets/statics/statics-left.webp";
@@ -6,9 +9,18 @@ import staticsRightCard from "@/assets/statics/statics-right.webp";
 // icons
 import { Play } from "lucide-react";
 
-export default function StaticsSection() {
+interface StaticsSectionProps {
+  className?: string;
+}
+
+export default function StaticsSection({ className }: StaticsSectionProps) {
   return (
-    <section className="relative z-10 max-h-fit mt-[-35%] sm:mt-[-25%] md:mt-[-15%] lg:mt-[-22%]">
+    <section
+      className={cn(
+        "relative z-10 max-h-fit mt-[-35%] sm:mt-[-25%] md:mt-[-15%] lg:mt-[-22%]",
+        className
+      )}
+    >
       <div className="container bg-background-secondary rounded-section p-3 relative">
         <h4 className="sm:text-sm text-xs uppercase text-text-secondary pb-3 text-center">
           See how we create an autonomous
