@@ -48,7 +48,7 @@ export function Navbar() {
 
   return (
     <nav className="container bg-white sm:rounded-navbar sticky sm:top-12 top-6 z-50">
-      <div className="flex justify-between items-center p-5 lg:px-10 md:px-7 px-5">
+      <div className="flex justify-between items-center p-3 lg:px-10 md:px-7 px-5">
         {/* Logo */}
         <a href="#home">
           <LogoIcon className="md:!w-36 w-28 md:h-6 h-6 min-h-full" />

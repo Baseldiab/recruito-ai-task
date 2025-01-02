@@ -14,7 +14,7 @@ export default function MainButton({
   return (
     <button
       className={cn(
-        "w-fit h-[fit] md:px-7 px-4 py-2 rounded-full text-white text-xl font-medium",
+        "w-fit h-[fit] md:px-5 px-2 py-2 default-text rounded-full text-white text-xl font-medium",
         "bg-gradient-to-r from-teal-400 to-blue-500",
         "transition-transform hover:scale-105",
         "focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2",
