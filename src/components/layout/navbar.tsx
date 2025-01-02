@@ -46,6 +46,9 @@ export function Navbar() {
     },
   ];
 
+  // hooks
+  // const { scrollToSection } = useAnimatedScroll();
+
   return (
     <nav
       className={`container bg-white fixed sm:top-10 top-6 left-1/2 -translate-x-1/2 z-50 
@@ -64,11 +67,11 @@ export function Navbar() {
             <li key={item.text}>
               <a
                 href={item.href}
-                className={`font-medium default-text
+                className={`font-medium default-text [&:target]:text-gradient
                 ${
                   isActiveSection(item.href)
                     ? "text-gradient relative"
-                    : "text-text-main hover:bg-gradient-to-r hover:from-blue-600 hover:to-teal-400 hover:bg-clip-text hover:text-transparent transition-colors"
+                    : "text-text-main hover:bg-gradient-to-r  hover:from-blue-600 hover:to-teal-400 hover:bg-clip-text hover:text-transparent transition-colors"
                 }`}
               >
                 <>
