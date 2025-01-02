@@ -29,11 +29,14 @@ export default {
         background: {
           DEFAULT: 'hsl(var(--background))',
           secondary: " #CFD8E34D",
-          footer: "#848EA00D"
+          footer: "#848EA00D",
+          testimonial: "#E6E8EC33"
         },
         text: {
           main: "#0B1928",
-          secondary: "#3E4757"
+          secondary: "#3E4757",
+          btn: "#004CD3",
+          third: "#848EA0"
         },
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -68,6 +71,7 @@ export default {
           DEFAULT: 'hsl(var(--border))',
           primary: '#848EA080',
           secondary: '#abcdef',
+          btn: "#848EA033"
         },
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
