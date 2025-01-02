@@ -56,7 +56,7 @@ export default function OrganaizationSection({
         Trusted by the world leading organisations
       </h5>
 
-      <div className="grid xl:grid-cols-6 lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-1 my-6 items-center">
+      <div className="grid xl:grid-cols-6 lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-1 my-6 items-center">
         {organisations.map((organisation, index) => (
           <figure
             key={organisation.id}

@@ -7,7 +7,7 @@ html {
 }
 
 .container {
-  @apply lg:w-[1180px] sm:w-[85%] w-[90%] !mx-auto;
+  @apply xl:w-[1180px]  sm:w-[85%] w-[90%] !mx-auto;
 }
 
 .default-text {

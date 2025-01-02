@@ -1,4 +1,4 @@
-// lib  
+// lib
 import { cn } from "@/lib/utils";
 
 interface FeaturesSectionProps {
@@ -7,10 +7,7 @@ interface FeaturesSectionProps {
 
 export default function FeaturesSection({ className }: FeaturesSectionProps) {
   return (
-    <section
-      id="features"
-      className={cn("container h-[500px]", className)}
-    >
+    <section id="features" className={cn("container h-[800px]", className)}>
       <h2 className="text-header text-center font-semibold">Features</h2>
     </section>
   );

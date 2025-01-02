@@ -10,6 +10,7 @@ import { NavbarItem } from "@/components/types/navbar.types";
 
 // components
 import MainButton from "@/components/buttons/mainButton";
+import MobileNav from "../navbar/mobileNav";
 
 export function Navbar() {
   // States
@@ -17,50 +18,80 @@ export function Navbar() {
   const [activeSection, setActiveSection] = React.useState("home"); // Default to home
 
   // Add click handler for smooth scrolling
-  const handleSectionClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
-  ) => {
-    e.preventDefault();
-    const targetId = href.replace("#", "");
-    const element = document.getElementById(targetId);
+  const handleSectionClick = React.useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+      e.preventDefault();
+      const targetId = href.replace("#", "");
+      const element = document.getElementById(targetId);
 
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(targetId);
-      setIsOpen(false);
-    }
-  };
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        setActiveSection(targetId);
+        setIsOpen(false);
+      }
+    },
+    []
+  );
 
-  // Update useEffect for intersection observer
   React.useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -20% 0px",
+      threshold: 0.5,
+    };
+
+    const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+      const visibleEntries = entries.filter((entry) => entry.isIntersecting);
+      if (visibleEntries.length > 0) {
+        const mostVisible = visibleEntries.reduce((prev, current) => {
+          return prev.intersectionRatio > current.intersectionRatio
+            ? prev
+            : current;
         });
-      },
-      { threshold: 0.5 }
-    );
+        setActiveSection(mostVisible.target.id);
+      }
+    };
 
-    // Observe all sections
-    document.querySelectorAll("section[id]").forEach((section) => {
-      observer.observe(section);
-    });
+    const observer = new IntersectionObserver(handleIntersect, observerOptions);
 
-    // Set initial active section to home
-    setActiveSection("home");
+    const sections = document.querySelectorAll("section[id]");
+    sections.forEach((section) => observer.observe(section));
 
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      if (scrollTop < 100) {
+        setActiveSection("home");
+        return;
+      }
+
+      if (
+        scrollTop + windowHeight >=
+        document.documentElement.scrollHeight - 100
+      ) {
+        const lastSection = Array.from(sections).pop();
+        if (lastSection) {
+          setActiveSection(lastSection.id);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
-  // Update isActiveSection function
-  const isActiveSection = (link: string) => {
-    const targetPath = link.replace("#", "");
-    return activeSection === targetPath;
-  };
+  const isActiveSection = React.useCallback(
+    (link: string) => {
+      const targetPath = link.replace("#", "");
+      return activeSection === targetPath;
+    },
+    [activeSection]
+  );
 
   const navItems: NavbarItem[] = [
     {
@@ -85,9 +116,6 @@ export function Navbar() {
     },
   ];
 
-  // hooks
-  // const { scrollToSection } = useAnimatedScroll();
-
   return (
     <nav
       className={`container bg-white fixed sm:top-8 top-5 left-1/2 -translate-x-1/2 z-50 
@@ -98,10 +126,7 @@ export function Navbar() {
     >
       <div className="flex justify-between items-center p-3 md:px-4 px-3">
         {/* Logo */}
-        <a
-          href="#
-        "
-        >
+        <a href="#">
           <LogoIcon className="md:!w-28 sm:w-28 w-20 md:h-6 h-6 min-h-full" />
         </a>
 
@@ -149,42 +174,12 @@ export function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-white border-t transform transition-all duration-300 ease-in-out ${
-          isOpen
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-2 pointer-events-none"
-        }`}
-      >
-        <div className="px-4 pt-2 pb-3 space-y-1 flex flex-col gap-2">
-          <ul className="flex flex-col gap-2">
-            {navItems.map((item) => (
-              <li key={item.text}>
-                <a
-                  href={item.href}
-                  onClick={(e) => handleSectionClick(e, item.href)}
-                  className={`font-medium default-text
-                  ${
-                    isActiveSection(item.href)
-                      ? "text-gradient relative"
-                      : "text-text-main hover:text-gradient transition-colors"
-                  }`}
-                >
-                  <>
-                    {item.text}
-                    {isActiveSection(item.href) && (
-                      <StarIcon className="size-2.5 absolute top-0.5 -right-2" />
-                    )}
-                  </>
-                </a>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-4">
-            <MainButton className="default-text w-full">Contact Us</MainButton>
-          </div>
-        </div>
-      </div>
+      <MobileNav
+        navItems={navItems}
+        isActive={isActiveSection}
+        isOpen={isOpen}
+        handleSectionClick={handleSectionClick}
+      />
     </nav>
   );
 }
