@@ -3,6 +3,7 @@ import HeaderSections from "@/components/sections/header";
 import StaticsSection from "@/components/sections/statics";
 import FeaturesSection from "@/components/sections/features";
 import OrganaizationSection from "@/components/sections/organaization";
+import HiringSection from "@/components/sections/hiring";
 
 export function HomePage() {
   return (
@@ -11,6 +12,7 @@ export function HomePage() {
       <StaticsSection />
       <OrganaizationSection className="py-10" />
       <FeaturesSection />
+      <HiringSection />
     </>
   );
 }
