@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .container {
-  @apply lg:w-[1180px] sm:w-[90%] w-[95%] mx-auto;
+  @apply lg:w-[1180px] sm:w-[90%] w-[95%] !mx-auto;
 }
 
 .default-text {

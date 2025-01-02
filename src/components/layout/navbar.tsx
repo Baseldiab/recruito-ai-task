@@ -47,11 +47,15 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="container bg-white sm:rounded-navbar sticky sm:top-12 top-6 z-50">
+    <nav
+      className={`container bg-white fixed sm:top-10 top-6 left-1/2 -translate-x-1/2 z-50 
+        transition-[border-radius] duration-300 ease-in-out
+        ${isOpen ? "rounded-t-navbar" : "rounded-navbar"}`}
+    >
       <div className="flex justify-between items-center p-3 lg:px-10 md:px-7 px-5">
         {/* Logo */}
         <a href="#home">
-          <LogoIcon className="md:!w-36 w-28 md:h-6 h-6 min-h-full" />
+          <LogoIcon className="md:!w-36 sm:w-28 w-20 md:h-6 h-6 min-h-full" />
         </a>
 
         {/* Desktop Navigation */}
@@ -86,13 +90,12 @@ export function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+          className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600"
         >
-          <span className="sr-only">Open main menu</span>
           {isOpen ? (
-            <X className="block h-6 w-6" aria-hidden="true" />
+            <X className="block sm:size-6 size-5" aria-hidden="true" />
           ) : (
-            <Menu className="block h-6 w-6" aria-hidden="true" />
+            <Menu className="block sm:size-6 size-5" aria-hidden="true" />
           )}
         </button>
       </div>
