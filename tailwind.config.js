@@ -28,7 +28,8 @@ export default {
       colors: {
         background: {
           DEFAULT: 'hsl(var(--background))',
-        secondary: " #CFD8E34D"
+          secondary: " #CFD8E34D",
+          footer: "#848EA00D"
         },
         text: {
           main: "#0B1928",
