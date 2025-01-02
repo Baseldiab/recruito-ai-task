@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 .container {
-  @apply lg:w-[1180px] sm:w-[90%] w-[95%] !mx-auto;
+  @apply lg:w-[1180px] sm:w-[85%] w-[90%] !mx-auto;
 }
 
 .default-text {
-  @apply md:text-base text-sm;
+  @apply text-sm;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-[#00E5DA] to-[#1F7BF6] bg-clip-text text-transparent;
 }

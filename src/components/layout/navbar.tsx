@@ -52,10 +52,10 @@ export function Navbar() {
         transition-[border-radius] duration-300 ease-in-out
         ${isOpen ? "rounded-t-navbar" : "rounded-navbar"}`}
     >
-      <div className="flex justify-between items-center p-3 lg:px-10 md:px-7 px-5">
+      <div className="flex justify-between items-center p-3 md:px-4 px-3">
         {/* Logo */}
         <a href="#home">
-          <LogoIcon className="md:!w-36 sm:w-28 w-20 md:h-6 h-6 min-h-full" />
+          <LogoIcon className="md:!w-28 sm:w-28 w-20 md:h-6 h-6 min-h-full" />
         </a>
 
         {/* Desktop Navigation */}
@@ -67,7 +67,7 @@ export function Navbar() {
                 className={`font-medium default-text
                 ${
                   isActiveSection(item.href)
-                    ? "bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent relative"
+                    ? "text-gradient relative"
                     : "text-text-main hover:bg-gradient-to-r hover:from-blue-600 hover:to-teal-400 hover:bg-clip-text hover:text-transparent transition-colors"
                 }`}
               >
@@ -117,8 +117,8 @@ export function Navbar() {
                   className={`font-medium default-text
                   ${
                     isActiveSection(item.href)
-                      ? "bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent relative"
-                      : "text-text-main hover:bg-gradient-to-r hover:from-blue-600 hover:to-teal-400 hover:bg-clip-text hover:text-transparent transition-colors"
+                      ? "text-gradient relative"
+                      : "text-text-main hover:text-gradient transition-colors"
                   }`}
                 >
                   <>

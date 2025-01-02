@@ -16,6 +16,14 @@ export default {
         sm: 'calc(var(--radius) - 4px)',
         navbar: '40px',
       },
+      fontSize: {
+        header: "54px",
+        title: "44px",
+      },
+      lineHeight: {
+        header: "64px",
+        title: "54px",
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
@@ -47,7 +55,11 @@ export default {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
         },
-        border: 'hsl(var(--border))',
+        border: {
+          DEFAULT: 'hsl(var(--border))',
+          primary: '#848EA080',
+          secondary: '#abcdef',
+        },
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         chart: {
@@ -59,7 +71,7 @@ export default {
         },
         text: {
           main: "#0B1928",
-          secondary: "#fff"
+          secondary: "#3E4757"
         },
       },
       keyframes: {
