@@ -5,8 +5,6 @@ import { cn } from "@/lib/utils";
 import IntysLogo from "@/assets/organisation/organisations-intys.png";
 import LinkedinLogo from "@/assets/organisation/organisations-linkedin.png";
 import OgilvyLogo from "@/assets/organisation/organisations-ogilvy.png";
-import OrganisationsLeft from "@/assets/organisation/organisations-left.png";
-import OrganisationsRight from "@/assets/organisation/organisations-right.png";
 import OrganisationsGsk from "@/assets/organisation/organisations-GSK.png";
 
 interface OrganaizationSectionProps {
