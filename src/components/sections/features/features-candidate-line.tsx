@@ -11,6 +11,8 @@ import FeaturesBasicCard from "./features-basicCard";
 
 // assets
 import CheckCircle2 from "@/assets/features/checkedIcon.svg";
+import CardSquareBg from "@/assets/features/features-right-square.webp";
+import CardSmallSquareBg from "@/assets/features/features-small-square.webp";
 
 // ui
 import { Card } from "@/components/ui/card";
@@ -37,15 +39,30 @@ export default function FeaturesCandidateLine({
   return (
     <article
       className={cn(
-        "grid md:grid-cols-2 grid-cols-1 items-center gap-6",
+        "grid md:grid-cols-2 grid-cols-1 items-center gap-6 relative",
         className
       )}
     >
+      <figure className="absolute top-0 right-0 translate-x-1/2 translate-y-1/2 -z-10">
+        <img
+          src={CardSquareBg}
+          alt="automated line"
+          className="w-full h-full object-cover"
+        />
+      </figure>
       <FeaturesBasicCard
         title="Candidate Sourcing & Job Posting"
         description="Recruito automatically posts your position or actively hunts top candidates across multiple platforms. No human intervention needed."
       />
-      <div className="w-full mx-auto  border border-theme-text-third/20 rounded-2xl p-5">
+      <div className="w-full mx-auto  border border-theme-text-third/20 rounded-2xl p-5 relative bg-white overflow-hidden">
+        <figure className="absolute top-0 right-0 translate-x-1/2 ">
+          <img
+            src={CardSmallSquareBg}
+            alt="automated line"
+            className="w-full h-full object-cover"
+          />
+        </figure>
+
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
