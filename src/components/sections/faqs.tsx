@@ -26,7 +26,7 @@ export default function FaqsSection({ className }: FaqsSectionParams) {
   return (
     <section className={cn("relative", className)}>
       <div className="container flex flex-col justify-center items-center gap-4 z-30">
-        <SectionTitleBtn className="px-4 z-20" title="FAQs " />
+        <SectionTitleBtn className="px-4 z-20" title="FAQs" />
 
         {/* Faqs Accordings */}
         <Accordion
