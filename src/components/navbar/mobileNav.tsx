@@ -41,7 +41,7 @@ export default function MobileNav({
             ${
               isActive(item.href)
                 ? "text-gradient relative"
-                : "text-text-main hover:text-gradient transition-colors"
+                : "text-theme-text-main hover:text-gradient transition-colors"
             }`}
               >
                 <>

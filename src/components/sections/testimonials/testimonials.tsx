@@ -29,7 +29,7 @@ export default function TestimonialsSection({
   className,
 }: TestimonialsSectionProps) {
   return (
-    <section className={cn("py-10", className)}>
+    <section className={cn("", className)}>
       <div className="container flex flex-col justify-center items-center gap-4 relative">
         <SectionTitleBtn title="Testimonials" />
         <SectionTitle title="Don’t just take our word for it—see what our clients say about Recruito AI." />

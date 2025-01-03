@@ -25,12 +25,12 @@ export default function TestimonialsCardItem({
           <AvatarFallback>{item.name}</AvatarFallback>
         </Avatar>
         <div className="flex flex-col justify-start items-start gap-1">
-          <p className="text-sm text-text-secondary">{item.name}</p>
-          <p className="text-sm text-text-third">{item.job}</p>
+          <p className="text-sm text-theme-text-secondary">{item.name}</p>
+          <p className="text-sm text-theme-text-third">{item.job}</p>
         </div>
       </CardHeader>
       <CardContent className="p-6 bg-[#E6E8EC33] rounded-xl">
-        <p className="text-sm text-text-secondary">{item.description}</p>
+        <p className="text-sm text-theme-text-secondary">{item.description}</p>
       </CardContent>
     </Card>
   );

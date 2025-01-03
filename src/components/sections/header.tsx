@@ -32,7 +32,7 @@ export default function HeaderSections({ className }: HeaderSectionsProps) {
     >
       {/* Header content */}
       <div className="container lg:pt-[218px] sm:pt-[140px] pt-[90px]  lg:max-w-[65%] xl:w-[50%] md:max-w-[70%]  w-[90%] mx-auto text-center ">
-        <h1 className=" lg:text-header lg:leading-header md:leading-title sm:text-title text-3xl font-semibold text-text-main ">
+        <h1 className=" lg:text-header lg:leading-header md:leading-title sm:text-title text-3xl font-semibold text-theme-text-main ">
           Revolutionize Your Hiring Process with
           <span className="text-gradient relative ms-1">
             Recruito AI
@@ -40,14 +40,14 @@ export default function HeaderSections({ className }: HeaderSectionsProps) {
           </span>
         </h1>
 
-        <p className="sm:text-base text-sm text-text-secondary mt-3 lg:w-[430px] sm:w-[70%] w-[70%] mx-auto">
+        <p className="sm:text-base text-sm text-theme-text-secondary mt-3 lg:w-[430px] sm:w-[70%] w-[70%] mx-auto">
           Your fully automated hiring assistant that sources, screens, and
           interviews candidates effortlessly
         </p>
 
         {/* Buttons */}
         <div className="flex justify-center items-center sm:mt-10 mt-5 gap-4">
-          <CustomButton className="flex justify-center items-center gap-2 capitalize !py-2 sm:!px-6 !px-4 sm:!text-sm !text-xs font-semibold border border-border-primary !shadow-none  text-text-main">
+          <CustomButton className="flex justify-center items-center gap-2 capitalize !py-2 sm:!px-6 !px-4 sm:!text-sm !text-xs font-semibold border border-theme-border-primary !shadow-none  text-theme-text-main">
             Start Your Free Trial
           </CustomButton>
 

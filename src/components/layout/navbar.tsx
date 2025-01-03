@@ -141,7 +141,7 @@ export function Navbar() {
                 ${
                   isActiveSection(item.href)
                     ? "text-gradient relative"
-                    : "text-text-main hover:bg-gradient-to-r  hover:from-blue-600 hover:to-teal-400 hover:bg-clip-text hover:text-transparent transition-colors"
+                    : "text-theme-text-main hover:bg-gradient-to-r  hover:from-blue-600 hover:to-teal-400 hover:bg-clip-text hover:text-transparent transition-colors"
                 }`}
               >
                 <>

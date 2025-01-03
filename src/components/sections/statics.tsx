@@ -21,8 +21,8 @@ export default function StaticsSection({ className }: StaticsSectionProps) {
         className
       )}
     >
-      <div className="container bg-background-secondary rounded-section p-3 relative">
-        <h4 className="sm:text-sm text-xs uppercase text-text-secondary pb-3 text-center">
+      <div className="container bg-theme-background-secondary rounded-section p-3 relative">
+        <h4 className="sm:text-sm text-xs uppercase text-theme-text-secondary pb-3 text-center">
           See how we create an autonomous
           <span className="underline ms-1">ai agent</span>
         </h4>

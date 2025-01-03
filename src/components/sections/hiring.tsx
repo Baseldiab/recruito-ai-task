@@ -25,7 +25,7 @@ export default function HiringSection({ className }: HiringProps) {
         <img src={hiringImageLeft} alt="hiring" />
       </figure>
       <div className="flex justify-center items-center flex-col gap-4 text-center ">
-        <h2 className=" font-semibold md:text-[40px] md:leading-title text-2xl">
+        <h2 className=" font-semibold md:text-[40px] md:leading-title text-2xl text-theme-text-subTitle">
           Ready to enhance your hiring process ?
         </h2>
         <MainButton className="flex justify-center items-center gap-2 capitalize !py-2 sm:!px-6 !px-4 sm:text-sm text-xs font-semibold">

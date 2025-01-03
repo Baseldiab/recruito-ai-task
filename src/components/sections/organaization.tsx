@@ -52,7 +52,7 @@ export default function OrganaizationSection({
       id="organization"
       className={cn("container", "bg-white rounded-navbar", className)}
     >
-      <h5 className="text-text-secondary text-sm text-center font-medium">
+      <h5 className="text-theme-text-secondary text-sm text-center font-medium">
         Trusted by the world leading organisations
       </h5>
 

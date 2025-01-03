@@ -13,7 +13,7 @@ export default function sectionTitleBtn({
   return (
     <CustomButton
       className={cn(
-        "capitalize text-text-btn border border-border-btn",
+        "capitalize text-theme-text-btn border border-theme-border-btn",
         className
       )}
     >
