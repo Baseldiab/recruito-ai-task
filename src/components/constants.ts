@@ -6,7 +6,7 @@ import moSalah from "@/assets/testominials/moSalah.webp";
 // types
 import { TestimonialsItem } from "@/components/types/testiminials.types";
 import { FaqsItemType } from "@/components/types/faqs.types";
-import { ChecklistItem, TeamMember } from "@/components/types/features";
+import { ChecklistItem, LeaderboardEntry, TeamMember } from "@/components/types/features";
 
 
 export const testimonialsItems: TestimonialsItem[] = [
@@ -133,5 +133,26 @@ export   const ChecklistItemArray: ChecklistItem[] = [
     id: 4,
     label: "Trends Awareness Quiz Test",
     completed: false,
+  },
+]
+
+export const leaderboardEntries: LeaderboardEntry[] = [
+  {
+    name: "Mohamed Salah",
+    rank: 1,
+    progress: 99,
+    avatar: moSalah,
+  },
+  {
+    name: "Emma Rivera",
+    rank: 2,
+    progress: 99,
+    avatar: testimonial1,
+  },
+  {
+    name: "Ryan Lee",
+    rank: 3,
+    progress: 98,
+    avatar: testimonial2,
   },
 ]

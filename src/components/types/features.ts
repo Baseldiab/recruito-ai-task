@@ -12,3 +12,10 @@ export interface ChecklistItem {
   label: string
   completed: boolean
 }
+
+export interface  LeaderboardEntry {
+  name: string
+  rank: number
+  progress: number
+  avatar: string
+}

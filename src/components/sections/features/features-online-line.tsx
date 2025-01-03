@@ -14,6 +14,7 @@ import CardSmallSquareBg from "@/assets/features/features-small-square.webp";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ChecklistItem } from "@/components/types/features";
 import { ChecklistItemArray } from "@/components/constants";
+import { useState } from "react";
 
 interface FeaturesOnlineLineProps {
   className?: string;
@@ -62,19 +63,22 @@ export default function FeaturesOnlineLine({
 }
 
 const CheckListItem = ({ item }: { item: ChecklistItem }) => {
+  const [isChecked, setIsChecked] = useState<boolean>(item.completed);
+
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4 w-full bg-white z-10">
       <Checkbox
         id={`item-${item.id}`}
-        checked={item.completed}
+        checked={isChecked}
         className={`h-6 w-6 ${
-          item.completed ? "!bg-[#5ED028] !border-none !text-white" : ""
+          isChecked ? "!bg-[#5ED028] !border-none !text-white" : ""
         }`}
+        onCheckedChange={(e) => setIsChecked(e as boolean)}
       />
       <label
         htmlFor={`item-${item.id}`}
-        className={`text-lg border border-[#E6E8EC] p-3 !m-0 rounded-[10px] ${
-          item.completed ? "line-through text-gray-400" : "text-gray-900"
+        className={`w-full flex-grow text-lg border border-[#E6E8EC] p-3 !m-0 rounded-[10px] ${
+          isChecked ? "line-through text-gray-400" : "text-gray-900"
         }`}
       >
         {`${item.id}- ${item.label}`}
