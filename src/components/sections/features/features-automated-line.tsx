@@ -69,8 +69,8 @@ export default function FeaturesAutomatedLine({
       </div>
 
       <FeaturesBasicCard
-        title="Candidate Sourcing & Job Posting"
-        description="Recruito automatically posts your position or actively hunts top candidates across multiple platforms. No human intervention needed."
+        title="Automated Resume Screening & Filtering"
+        description="Our AI instantly sorts and prioritizes resumes, highlighting only the strongest matches and discarding unqualified applicants."
       />
     </article>
   );

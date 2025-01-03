@@ -19,7 +19,10 @@ interface FeaturesSectionProps {
 
 export default function FeaturesSection({ className }: FeaturesSectionProps) {
   return (
-    <section id="features" className={cn("relative", className)}>
+    <section
+      id="features"
+      className={cn("relative overflow-hidden", className)}
+    >
       <div className="container flex flex-col justify-center items-center gap-4 z-30">
         <SectionTitleBtn className="px-4 z-20" title="Features" />
 

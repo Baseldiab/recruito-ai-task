@@ -29,7 +29,7 @@ export default function FeaturesOnlineLine({
         className
       )}
     >
-      <figure className="absolute top-0 right-0 translate-x-1/2 translate-y-1/2 -z-10">
+      <figure className="absolute top-0 right-0 translate-x-1/2 translate-y-1/2 ">
         <img
           src={CardSquareBg}
           alt="automated line"
@@ -43,7 +43,7 @@ export default function FeaturesOnlineLine({
       />
 
       <div className="w-full mx-auto  border border-theme-text-third/20 rounded-2xl md:p-8 p-5 relative bg-white overflow-hidden ">
-        <div className="p-3 bg-white flex flex-col gap-3 items-start justify-center border border-theme-text-third/20 rounded-[10px] !z-20">
+        <div className="p-3 bg-white flex flex-col gap-3 items-start justify-center border border-theme-text-third/20 rounded-[10px]">
           {ChecklistItemArray.map((item) => (
             <CheckListItem key={item.id} item={item} />
           ))}
