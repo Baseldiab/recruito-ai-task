@@ -31,7 +31,7 @@ export default function TestimonialsSection({
   return (
     <section className={cn("", className)}>
       <div className="container flex flex-col justify-center items-center gap-4 relative">
-        <SectionTitleBtn title="Testimonials" />
+        <SectionTitleBtn title="Testimonials" className="mb-3" />
         <SectionTitle title="Don’t just take our word for it—see what our clients say about Recruito AI." />
 
         {/* Testimonials Cards */}
@@ -55,7 +55,7 @@ const Cards = () => {
         plugins={[plugin.current]}
         onMouseEnter={plugin.current.stop}
         onMouseLeave={() => plugin.current.play()}
-        className="w-full py-7 relative"
+        className="w-full sm:py-7 py-3 relative"
       >
         <CarouselContent className="mx-auto">
           {testimonialsItems.map((item, index) => (

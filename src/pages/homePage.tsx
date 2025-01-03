@@ -3,7 +3,7 @@ import HeaderSections from "@/components/sections/header";
 import StaticsSection from "@/components/sections/statics";
 import OrganaizationSection from "@/components/sections/organaization";
 import FeaturesSection from "@/components/sections/features";
-import FaqsSection from "@/components/sections/faqs/faqs";
+import FaqsSection from "@/components/sections/faqs";
 import TestimonialsSection from "@/components/sections/testimonials/testimonials";
 import HiringSection from "@/components/sections/hiring";
 
@@ -14,9 +14,9 @@ export function HomePage() {
       <StaticsSection />
       <OrganaizationSection className="sm:py-10 py-5" />
       <FeaturesSection />
-      <FaqsSection className="sm:py-10 py-5" />
+      <FaqsSection className="sm:pb-10 sm:pt-20 py-5" />
       <TestimonialsSection className="sm:py-10 py-5" />
-      <HiringSection />
+      <HiringSection className="max-md:py-5" />
     </>
   );
 }

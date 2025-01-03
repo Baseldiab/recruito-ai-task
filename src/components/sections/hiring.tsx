@@ -17,7 +17,7 @@ export default function HiringSection({ className }: HiringProps) {
   return (
     <section
       className={cn(
-        " md:grid grid-cols-3 flex justify-center items-center min-h-fit max-md:py-10 h-fit max-md:w-[70%] max-sm:w-[90%] mx-auto",
+        " md:grid grid-cols-3 flex justify-center items-center min-h-fit  h-fit max-md:w-[70%] max-sm:w-[90%] mx-auto",
         className
       )}
     >
