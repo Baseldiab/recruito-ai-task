@@ -1,12 +1,12 @@
-// types
-import { TestimonialsItem } from "@/components/types/testiminials.types";
-import { FaqsItemType } from "@/components/types/faqs.types";
-
 // assets-testimonials
 import testimonial1 from "@/assets/testominials/user-1.png";
 import testimonial2 from "@/assets/testominials/user-2.png";
 import moSalah from "@/assets/testominials/moSalah.webp";
-import { TeamMember } from "./types/features";
+
+// types
+import { TestimonialsItem } from "@/components/types/testiminials.types";
+import { FaqsItemType } from "@/components/types/faqs.types";
+import { ChecklistItem, TeamMember } from "@/components/types/features";
 
 
 export const testimonialsItems: TestimonialsItem[] = [
@@ -110,4 +110,28 @@ export  const teamMembers: TeamMember[] = [
     image: testimonial1,
     skills: ["Creative Suite", "Typography", "Illustrator", "Canva"]
   }
+]
+
+
+export   const ChecklistItemArray: ChecklistItem[] = [
+  {
+    id: 1,
+    label: "Creative Design Skills Test",
+    completed: true,
+  },
+  {
+    id: 2,
+    label: "UX/UI Design Challenge",
+    completed: true,
+  },
+  {
+    id: 3,
+    label: "Problem-Solving Task",
+    completed: true,
+  },
+  {
+    id: 4,
+    label: "Trends Awareness Quiz Test",
+    completed: false,
+  },
 ]

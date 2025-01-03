@@ -5,4 +5,10 @@ export interface TeamMember {
     image: string
     skills: string[]
     isActive?: boolean
-  }
+}
+  
+export interface ChecklistItem {
+  id: number
+  label: string
+  completed: boolean
+}
