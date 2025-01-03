@@ -140,19 +140,19 @@ export const leaderboardEntries: LeaderboardEntry[] = [
   {
     name: "Mohamed Salah",
     rank: 1,
-    progress: 99,
+    progress: 90,
     avatar: moSalah,
   },
   {
     name: "Emma Rivera",
     rank: 2,
-    progress: 99,
+    progress: 80,
     avatar: testimonial1,
   },
   {
     name: "Ryan Lee",
     rank: 3,
-    progress: 98,
+    progress: 70,
     avatar: testimonial2,
   },
 ]

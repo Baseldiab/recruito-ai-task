@@ -5,12 +5,12 @@ import { cn } from "@/lib/utils";
 
 // components
 import FeaturesBasicCard from "./features-basicCard";
+import { CircleProgress } from "@/components/common/circleProgress";
 
 // assets
 import CardSquareBg from "@/assets/features/features-right-square.webp";
 import CardSmallSquareBg from "@/assets/features/features-small-square.webp";
 import CardAiVideoBg from "@/assets/features/aiVideoImg.png";
-import { CircleProgress } from "@/components/common/circleProgress";
 
 // ui
 
