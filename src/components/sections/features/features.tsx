@@ -12,6 +12,8 @@ import SectionTitle from "@/components/common/sectionTitle";
 import FeaturesCandidateLine from "@/components/sections/features/features-candidate-line";
 import FeaturesAutomatedLine from "@/components/sections/features/features-automated-line";
 import FeaturesOnlineLine from "@/components/sections/features/features-online-line";
+import FeaturesAiVideoLine from "@/components/sections/features/features-aiVideo-line";
+import FeaturesFinalLine from "@/components/sections/features/features-final-line";
 
 interface FeaturesSectionProps {
   className?: string;
@@ -37,6 +39,8 @@ export default function FeaturesSection({ className }: FeaturesSectionProps) {
           <FeaturesCandidateLine />
           <FeaturesAutomatedLine />
           <FeaturesOnlineLine />
+          <FeaturesAiVideoLine />
+          <FeaturesFinalLine />
         </div>
       </div>
     </section>
