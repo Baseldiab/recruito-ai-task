@@ -55,7 +55,7 @@ const Cards = () => {
         plugins={[plugin.current]}
         onMouseEnter={plugin.current.stop}
         onMouseLeave={() => plugin.current.play()}
-        className="w-full sm:py-7 py-3 relative"
+        className="w-full md:py-7 py-3 relative"
       >
         <CarouselContent className="mx-auto">
           {testimonialsItems.map((item, index) => (

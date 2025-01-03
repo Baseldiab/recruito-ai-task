@@ -32,20 +32,25 @@ export default {
 				  background: {
 					  secondary: ' #CFD8E34D',
 					  footer: '#848EA00D',
-					  testimonial: '#E6E8EC33'
+					  testimonial: '#E6E8EC33',
+					  needs: "#0B1928",
+					  card: "#152232"
 				  },
 				  text: {
 					  main: '#0B1928',
 					  secondary: '#3E4757',
 					  btn: '#004CD3',
 					  third: '#848EA0',
-					  subTitle: "#0B1928"
+					  subTitle: "#0B1928",
+					  success: "#1BD1C2",
+					  dark: "#848EA0"
 				  },	
 				  border: {
 					  primary: '#848EA080',
 					  main: "#848EA033",
 					  secondary: '#abcdef',
-					  btn: '#848EA033'
+					  btn: '#848EA033',
+					  dark: "#848EA033"
 				  },
 		  },
   			background: {

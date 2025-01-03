@@ -1,9 +1,12 @@
+// types
 import { TestimonialsItem } from "@/components/types/testiminials.types";
+import { FaqsItemType } from "@/components/types/faqs.types";
 
-// assets
+// assets-testimonials
 import testimonial1 from "@/assets/testominials/user-1.png";
 import testimonial2 from "@/assets/testominials/user-2.png";
 import moSalah from "@/assets/testominials/moSalah.webp";
+
 
 export const testimonialsItems: TestimonialsItem[] = [
   {
@@ -48,4 +51,39 @@ export const testimonialsItems: TestimonialsItem[] = [
       image: moSalah,
       job: "football player",
     },
-  ];
+];
+  
+
+export const faqsArray: FaqsItemType[] = [
+  {
+    value: "item-1",
+    title: "What is an AI Agent?",
+    content: `An AI agent is a software system that understands language, learns from data, and takes actions automatically to achieve specific goals. In the hiring world, an AI agent can review resumes, interact with candidates, and provide recommendations, all without manual oversight. Key capabilities include:
+• Natural Language Processing to interpret resumes and candidate responses
+• Adaptive Learning to improve accuracy and efficiency over time
+• Task Automation to handle repetitive or time-consuming steps
+• Data-Driven Insights for better predictions and decisions`,
+  },
+  {
+    value: "item-2",
+    title: "What are the Benefits of Using Recruito’s AI Agent?",
+    content: `  Yes. It's animated by default, but you can disable it if you
+            prefer.. Key capabilities include:
+• Natural Language Processing to interpret resumes and candidate responses
+• Adaptive Learning to improve accuracy and efficiency over time
+• Task Automation to handle repetitive or time-consuming steps
+• Data-Driven Insights for better predictions and decisions`,
+  },
+  {
+    value: "item-3",
+    title: "Next Steps?",
+    content: `Yes. It comes with default styles that matches the other
+            components&apos; aesthetic. Key capabilities include:
+• Natural Language Processing to interpret resumes and candidate responses
+• Adaptive Learning to improve accuracy and efficiency over time
+• Task Automation to handle repetitive or time-consuming steps
+• Data-Driven Insights for better predictions and decisions`,
+  },
+];
+
+
