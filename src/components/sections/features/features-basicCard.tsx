@@ -15,7 +15,7 @@ export default function FeaturesBasicCard({
   return (
     <div
       className={cn(
-        "flex flex-col gap-3 items-start justify-center h-full",
+        "flex flex-col gap-3 items-start justify-center h-full px-8",
         className
       )}
     >

@@ -6,6 +6,7 @@ import { FaqsItemType } from "@/components/types/faqs.types";
 import testimonial1 from "@/assets/testominials/user-1.png";
 import testimonial2 from "@/assets/testominials/user-2.png";
 import moSalah from "@/assets/testominials/moSalah.webp";
+import { TeamMember } from "./types/features";
 
 
 export const testimonialsItems: TestimonialsItem[] = [
@@ -87,3 +88,26 @@ export const faqsArray: FaqsItemType[] = [
 ];
 
 
+export  const teamMembers: TeamMember[] = [
+  {
+    id: 1,
+    name: "Ryan",
+    role: "Senior Graphic Designer",
+    image: moSalah,
+    skills: ["Creative Suite", "Marketing", "Canva"]
+  },
+  {
+    id: 2,
+    name: "Alex Martin",
+    role: "Senior Graphic Designer",
+    image: testimonial2,
+    skills: ["Adobe Creative Suite", "Typography", "After Effects", "Figma"]
+  },
+  {
+    id: 3,
+    name: "Maria Rivera",
+    role: "Senior Graphic Designer",
+    image: testimonial1,
+    skills: ["Creative Suite", "Typography", "Illustrator", "Canva"]
+  }
+]
