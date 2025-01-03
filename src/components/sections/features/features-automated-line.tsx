@@ -8,8 +8,9 @@ import FeaturesBasicCard from "@/components/sections/features/features-basicCard
 import { FileText } from "lucide-react";
 
 // assets
-import CardSquareBg from "@/assets/features/features-left-square.webp";
+import CardSmallSquareBg from "@/assets/features/features-left-square.webp";
 import GlassBg from "@/assets/features/GlassImg.png";
+import CardSquareBg from "@/assets/features/features-right-square.webp";
 
 // ui imports
 import { Card } from "@/components/ui/card";
@@ -28,7 +29,15 @@ export default function FeaturesAutomatedLine({
         className
       )}
     >
-      <div className="flex flex-col justify-center items-center gap-3 w-full mx-auto  border border-theme-text-third/20 rounded-2xl  md:p-14 p-8 relative overflow-hidden">
+      <figure className="absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2 -z-10">
+        <img
+          src={CardSquareBg}
+          alt="automated line"
+          className="w-full h-full object-cover"
+        />
+      </figure>
+
+      <div className="flex flex-col justify-center items-center gap-3 w-full mx-auto  border border-theme-text-third/20 rounded-2xl  md:p-14 p-8 relative overflow-hidden bg-white">
         <AutomatedLineCard
           iconColor="text-blue-500"
           className="w-full mx-auto max-w-[470px]"
@@ -44,7 +53,7 @@ export default function FeaturesAutomatedLine({
 
         <figure className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2">
           <img
-            src={CardSquareBg}
+            src={CardSmallSquareBg}
             alt="automated line"
             className="w-full h-full object-cover"
           />

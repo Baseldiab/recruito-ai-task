@@ -11,6 +11,7 @@ import SectionTitle from "@/components/common/sectionTitle";
 // components-features
 import FeaturesCandidateLine from "@/components/sections/features/features-candidate-line";
 import FeaturesAutomatedLine from "@/components/sections/features/features-automated-line";
+import FeaturesOnlineLine from "@/components/sections/features/features-online-line";
 
 interface FeaturesSectionProps {
   className?: string;
@@ -29,9 +30,10 @@ export default function FeaturesSection({ className }: FeaturesSectionProps) {
           <StarsIcon className="size-10 absolute bottom-0 left-0" />
         </div>
 
-        <div className="flex flex-col items-center gap-2 mt-7">
+        <div className="flex flex-col items-center gap-2 my-7">
           <FeaturesCandidateLine />
           <FeaturesAutomatedLine />
+          <FeaturesOnlineLine />
         </div>
       </div>
     </section>
