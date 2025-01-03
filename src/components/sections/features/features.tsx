@@ -28,7 +28,7 @@ export default function FeaturesSection({ className }: FeaturesSectionProps) {
           <StarsIcon className="size-10 absolute bottom-0 left-0" />
         </div>
 
-        <div className="flex flex-col items-center gap-2 mt-5">
+        <div className="flex flex-col items-center gap-2 mt-7">
           <FeaturesCandidateLine />
         </div>
       </div>

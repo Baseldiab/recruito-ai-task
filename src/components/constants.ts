@@ -90,18 +90,18 @@ export const faqsArray: FaqsItemType[] = [
 
 export  const teamMembers: TeamMember[] = [
   {
-    id: 1,
-    name: "Ryan",
-    role: "Senior Graphic Designer",
-    image: moSalah,
-    skills: ["Creative Suite", "Marketing", "Canva"]
-  },
-  {
     id: 2,
     name: "Alex Martin",
     role: "Senior Graphic Designer",
     image: testimonial2,
     skills: ["Adobe Creative Suite", "Typography", "After Effects", "Figma"]
+  },
+  {
+    id: 1,
+    name: "Mohamed Salah",
+    role: "Football Player",
+    image: moSalah,
+    skills: ["Creative Suite", "Marketing", "Canva"]
   },
   {
     id: 3,

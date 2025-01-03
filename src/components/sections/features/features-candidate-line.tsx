@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 // lib imports
 import { cn } from "@/lib/utils";
 
@@ -7,12 +9,21 @@ import { TeamMember } from "@/components/types/features";
 // components
 import FeaturesBasicCard from "./features-basicCard";
 
-// icons
-import { CheckCircle2 } from "lucide-react";
+// assets
+import CheckCircle2 from "@/assets/features/checkedIcon.svg";
 
 // ui
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+
+// swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 import { teamMembers } from "@/components/constants";
 
 interface FeaturesCandidateLineProps {
@@ -22,10 +33,11 @@ interface FeaturesCandidateLineProps {
 export default function FeaturesCandidateLine({
   className,
 }: FeaturesCandidateLineProps) {
+  const [activeIndex, setActiveIndex] = useState(1);
   return (
     <article
       className={cn(
-        "grid md:grid-cols-2 grid-cols-1 items-centergap-3",
+        "grid md:grid-cols-2 grid-cols-1 items-center gap-6",
         className
       )}
     >
@@ -33,15 +45,39 @@ export default function FeaturesCandidateLine({
         title="Candidate Sourcing & Job Posting"
         description="Recruito automatically posts your position or actively hunts top candidates across multiple platforms. No human intervention needed."
       />
-      <div className="grid grid-cols-3 gap-3">
-        {teamMembers.map((member, index) => (
-          <CardItem
-            key={member.id}
-            index={index}
-            activeIndex={0}
-            member={member}
-          />
-        ))}
+      <div className="w-full max-w-5xl mx-auto  border border-theme-text-third/20 rounded-2xl p-5">
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={2}
+          initialSlide={1}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 500,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+          pagination={{ clickable: true }}
+          modules={[EffectCoverflow]}
+          className="w-full  gap-5 p-8 flex justify-center items-center"
+        >
+          {teamMembers.map((member, index) => (
+            <SwiperSlide
+              key={member.id}
+              className=""
+              style={{ height: "290px" }}
+            >
+              <CardItem
+                index={index}
+                activeIndex={activeIndex}
+                member={member}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </article>
   );
@@ -58,42 +94,35 @@ const CardItem = ({
 }) => {
   return (
     <Card
-      className={`relative p-6 transition-all duration-300 ${
-        index === activeIndex
-          ? "scale-100 opacity-100 shadow-xl bg-white"
-          : "scale-90 opacity-70"
-      }`}
+      className={cn(
+        "relative bg-white rounded-2xl p-6 flex flex-col items-center text-center !w-[250px] h-full transition-all duration-300 shadow-lg",
+        activeIndex === index ? "mb-[28px]" : "mt-[28px]"
+      )}
     >
-      {index === activeIndex && (
-        <div className="absolute -top-3 -left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center">
-          <CheckCircle2 className="w-6 h-6 text-[#00C853]" />
+      {activeIndex === index && (
+        <div className="absolute top-4 left-4 bg-white rounded-full p-1.5">
+          <CheckCircle2 className="w-5 h-5 text-green-500" />
         </div>
       )}
-      <div className="flex flex-col items-center text-center space-y-4">
-        <div className="relative w-24 h-24">
-          <img
-            src={member.image}
-            alt={`${member.name}'s profile`}
-            className="rounded-full object-cover border-4 border-gray-100"
-            width={96}
-            height={96}
-          />
-        </div>
-        <div className="space-y-1">
-          <h3 className="text-xl font-semibold text-gray-800">{member.name}</h3>
-          <p className="text-gray-600 text-sm">{member.role}</p>
-        </div>
-        <div className="flex flex-wrap gap-2 justify-center">
-          {member.skills.map((skill) => (
-            <Badge
-              key={skill}
-              variant="secondary"
-              className="rounded-full px-4 py-1 bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
-            >
-              {skill}
-            </Badge>
-          ))}
-        </div>
+      <div className="w-20 h-20 rounded-full overflow-hidden mb-4 border-2 border-white">
+        <img
+          src={member.image}
+          alt={member.name}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+      <p className="text-gray-600 text-sm mb-6">{member.role}</p>
+      <div className="flex flex-wrap gap-2 justify-center">
+        {member.skills.map((skill: string) => (
+          <Badge
+            key={skill}
+            variant="secondary"
+            className="rounded-full px-3 py-0.5 text-xs bg-gray-100 text-gray-700"
+          >
+            {skill}
+          </Badge>
+        ))}
       </div>
     </Card>
   );
