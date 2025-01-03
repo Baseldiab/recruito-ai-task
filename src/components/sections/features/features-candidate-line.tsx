@@ -45,17 +45,25 @@ export default function FeaturesCandidateLine({
         title="Candidate Sourcing & Job Posting"
         description="Recruito automatically posts your position or actively hunts top candidates across multiple platforms. No human intervention needed."
       />
-      <div className="w-full max-w-5xl mx-auto  border border-theme-text-third/20 rounded-2xl p-5">
+      <div className="w-full mx-auto  border border-theme-text-third/20 rounded-2xl p-5">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={2}
+          slidesPerView={1}
+          breakpoints={{
+            568: {
+              slidesPerView: 2,
+              coverflowEffect: {
+                depth: 500,
+              },
+            },
+          }}
           initialSlide={1}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
-            depth: 500,
+            depth: 100,
             modifier: 1,
             slideShadows: false,
           }}
@@ -95,7 +103,7 @@ const CardItem = ({
   return (
     <Card
       className={cn(
-        "relative bg-white rounded-2xl p-6 flex flex-col items-center text-center !w-[250px] h-full transition-all duration-300 shadow-lg",
+        "relative bg-white rounded-2xl p-6 flex flex-col items-center text-center sm:!w-[250px] w-full min-w-[200px] h-full transition-all duration-300 shadow-lg",
         activeIndex === index ? "mb-[28px]" : "mt-[28px]"
       )}
     >
