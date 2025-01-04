@@ -54,22 +54,34 @@ A responsive React application built to demonstrate modern web development pract
 
 ### 📚 Project Structure:
 
-project-root/ </br>
-├─ src/ </br>
-│ ├─ components/ <span style="margin-inline: 15px;"></span> # Reusable UI components </br>
-│ ├─ pages/ <span style="margin-inline: 15px;"></span> # Page-level components </br>
-│ ├─ assets/ <span style="margin-inline: 15px;"></span> # Images, fonts, and other static files </br>
-│ ├─ lib/ <span style="margin-inline: 15px;"></span> # Third-party library configurations </br>
-│ ├─ utils/ <span style="margin-inline: 15px;"></span> # Helper functions and utilities </br>
-│ ├─ constants/ <span style="margin-inline: 15px;"></span> # Application constants and configurations </br>
-│ ├─ routes/ <span style="margin-inline: 15px;"></span> # Route definitions </br>
-│ └─ index.tsx <span style="margin-inline: 15px;"></span> # Application entry point </br>
-│
-├─ vite.config.ts <span style="margin-inline: 15px;"></span> # Vite configuration </br>
-├─ tsconfig.json <span style="margin-inline: 15px;"></span> # TypeScript configuration </br>
-├─ tailwind.config.ts <span style="margin-inline: 15px;"></span> # Tailwind CSS configuration </br>
-├─ postcss.config.ts <span style="margin-inline: 15px;"></span> # PostCSS configuration </br>
-└─ package.json <span style="margin-inline: 15px;"></span> # Project dependencies and scripts </br>
+<pre style="background-color: #1a1a1a; color: #fff; padding: 15px; border-radius: 5px; font-family: 'Consolas', monospace;">
+project-root/
+src/ ├── components/
+    │   ├── buttons/
+    │   │   └── mainButton.tsx    <span style="color: #888"># Reusable button component</span>
+    │   ├── layout/
+    │   │   ├── navbar.tsx        <span style="color: #888"># Main navigation</span>
+    │   │   ├── footer.tsx        <span style="color: #888"># Footer component</span>
+    │   │   └── layout.tsx        <span style="color: #888"># Main layout wrapper</span>
+    │   ├── sections/
+    │   │   ├── header/
+    │   │   ├── statics/
+    │   │   ├── organization/
+    │   │   ├── features/
+    │   │   ├── needs/
+    │   │   ├── faqs/
+    │   │   ├── testimonials/
+    │   │   └── hiring/
+    │   ├── ui/                   <span style="color: #888"># Shadcn UI components</span>
+    │   └── types/                <span style="color: #888"># TypeScript type definitions</span>
+    ├── pages/
+    │   ├── homePage.tsx          <span style="color: #888"># Main landing page</span>
+    │   └── errorPage.tsx         <span style="color: #888"># Error handling page</span>
+    ├── assets/                   <span style="color: #888"># Static assets (images, icons)</span>
+    ├── lib/                      <span style="color: #888"># Utility functions</span>
+    ├── constants/                <span style="color: #888"># Shared constants</span>
+    └── routes/                   <span style="color: #888"># Route definitions</span>
+</pre>
 
 ---
 
