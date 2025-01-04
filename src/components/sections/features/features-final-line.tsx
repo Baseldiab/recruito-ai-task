@@ -45,7 +45,7 @@ export default function FeaturesFinalLine({
       />
 
       <div className="w-full mx-auto  border border-theme-text-third/20 rounded-2xl md:p-8 p-5 relative bg-white overflow-hidden ">
-        <div className="flex flex-col justify-center items-center gap-10">
+        <div className="flex flex-col justify-center items-center lg:gap-10 sm:gap-5 gap-3">
           {leaderboardEntries.map((item, index) => (
             <FinalCardItem key={item.name} entry={item} index={index} />
           ))}
@@ -98,9 +98,15 @@ const FinalCardItem = ({
               </span>
               <CircleProgress
                 value={entry.progress}
-                size={60}
-                strokeWidth={4}
-                textClassName=" text-xs text-black"
+                size={{
+                  default: 40,
+                  sm: 60,
+                }}
+                strokeWidth={{
+                  sm: 5,
+                  default: 3,
+                }}
+                textClassName=" md:text-xs text-[8px] text-black"
                 progressClassName="text-[#5ED028]"
                 bgColor="text-[#E1E4E8]"
               />

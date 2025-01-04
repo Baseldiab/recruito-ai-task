@@ -13,7 +13,7 @@ export default function sectionTitleBtn({
   return (
     <CustomButton
       className={cn(
-        "sm:w-32 sm:h-10 font-medium text-sm capitalize text-theme-text-btn border border-theme-border-btn",
+        "sm:w-32 w-28 sm:h-10 font-medium text-sm capitalize text-theme-text-btn border border-theme-border-btn",
         className
       )}
     >

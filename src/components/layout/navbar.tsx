@@ -124,7 +124,7 @@ export function Navbar() {
         before:absolute before:inset-0 before:-z-10 before:rounded-navbar before:p-[1px]
         before:bg-gradient-to-r before:from-[#FFFFFF]/90 before:via-[#FFFFFF]/30 before:to-[#FFFFFF]/90 shadow-lg`}
     >
-      <div className="flex justify-between items-center p-3 md:px-4 px-3">
+      <div className="flex justify-between items-center sm:p-3 p-2 md:px-4 px-3">
         {/* Logo */}
         <a href="#">
           <LogoIcon className="md:!w-28 sm:w-28 w-20 md:h-6 h-6 min-h-full" />
@@ -163,12 +163,12 @@ export function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600"
+          className="md:hidden inline-flex items-center justify-center p-1 rounded-md text-gray-700 hover:text-blue-600"
         >
           {isOpen ? (
-            <X className="block sm:size-6 size-5" aria-hidden="true" />
+            <X className="block sm:size-6 size-4" aria-hidden="true" />
           ) : (
-            <Menu className="block sm:size-6 size-5" aria-hidden="true" />
+            <Menu className="block sm:size-6 size-4" aria-hidden="true" />
           )}
         </button>
       </div>

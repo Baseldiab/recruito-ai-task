@@ -13,7 +13,6 @@ import GlassBg from "@/assets/features/GlassImg.png";
 import CardSquareBg from "@/assets/features/features-right-square.webp";
 
 // ui imports
-import { Card } from "@/components/ui/card";
 
 interface FeaturesAutomatedLineProps {
   className?: string;
@@ -44,7 +43,7 @@ export default function FeaturesAutomatedLine({
         />
         <AutomatedLineCard
           iconColor="text-green-500"
-          className="md:w-[60%] w-[90%] mx-auto max-w-[424px]"
+          className="md:w-[80%] w-[90%] mx-auto max-w-[424px]"
         />
         <AutomatedLineCard
           iconColor="text-red-500"
@@ -85,9 +84,9 @@ const AutomatedLineCard = ({
   iconColor,
 }: AutomatedLineCardProps) => {
   return (
-    <Card
+    <div
       className={cn(
-        "p-2 flex items-start gap-3 border-2 ` shadow-sm hover:shadow-md transition-shadow",
+        "p-2 flex items-start gap-3 border-2 ` shadow-sm hover:shadow-md transition-shadow rounded-xl",
         className
       )}
     >
@@ -98,6 +97,6 @@ const AutomatedLineCard = ({
         <div className="h-4 bg-gray-100 rounded w-3/4" />
         <div className="h-3 bg-gray-50 rounded w-1/2" />
       </div>
-    </Card>
+    </div>
   );
 };

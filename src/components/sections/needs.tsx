@@ -50,10 +50,10 @@ export default function NeedsSection({ className }: NeedsSectionParams) {
   ];
   return (
     <section className={cn("bg-theme-background-needs relative", className)}>
-      <div className="container flex flex-col justify-center items-center gap-4">
+      <div className="container flex flex-col justify-center items-center sm:gap-4 gap-2">
         <SectionTitleBtn
           title="Benefits "
-          className="mb-3 border-theme-border-dark text-theme-text-success"
+          className="md:mb-3 border-theme-border-dark text-theme-text-success"
         />
         <SectionTitle
           title="Unlock the advantages of using Recruito AI for your hiring needs."

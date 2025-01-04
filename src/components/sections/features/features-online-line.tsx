@@ -77,7 +77,7 @@ const CheckListItem = ({ item }: { item: ChecklistItem }) => {
       />
       <label
         htmlFor={`item-${item.id}`}
-        className={`w-full flex-grow text-lg border border-[#E6E8EC] p-3 !m-0 rounded-[10px] ${
+        className={`w-full flex-grow md:text-lg sm:text-base text-xs border border-[#E6E8EC] md:p-3 p-2 !m-0 rounded-[10px] ${
           isChecked ? "line-through text-gray-400" : "text-gray-900"
         }`}
       >

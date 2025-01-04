@@ -14,11 +14,11 @@ export function HomePage() {
       <HeaderSections />
       <StaticsSection />
       <OrganaizationSection className="sm:py-16 py-5" />
-      <FeaturesSection />
-      <NeedsSection className="sm:py-14 py-5" />
-      <FaqsSection className="sm:pb-10 sm:pt-20 py-5" />
-      <TestimonialsSection className="sm:py-10 py-5" />
-      <HiringSection className="max-md:py-5" />
+      <FeaturesSection className="sm:pb-14 pb-8" />
+      <NeedsSection className="sm:py-14 py-8" />
+      <FaqsSection className="sm:pb-10 sm:pt-20 py-8" />
+      <TestimonialsSection className="sm:py-10 py-8" />
+      <HiringSection className="max-md:py-8" />
     </>
   );
 }

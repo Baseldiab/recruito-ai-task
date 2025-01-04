@@ -30,9 +30,9 @@ export default function FaqsSection({ className }: FaqsSectionParams) {
 
         {/* Faqs Accordings */}
         <Accordion
-          type="single"
-          defaultValue={faqsArray[0].value}
-          collapsible
+          type="multiple"
+          defaultValue={[faqsArray[0].value]}
+          // collapsible
           className="mx-auto max-w-[980px] md:w-[75%] sm:[85%] w-full bg-white border border-theme-border-main rounded-xl sm:my-9 my-3 z-20"
         >
           {faqsArray.map((e) => (

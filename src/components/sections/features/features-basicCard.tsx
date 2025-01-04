@@ -19,10 +19,12 @@ export default function FeaturesBasicCard({
         className
       )}
     >
-      <h3 className="text-title leading-title text-theme-text-main text-start font-semibold">
+      <h3 className="md:text-title text-2xl md:leading-title text-theme-text-main text-start font-semibold">
         {title}
       </h3>
-      <p className="text-base  text-theme-text-secondary">{description}</p>
+      <p className="md:text-base text-sm text-theme-text-secondary">
+        {description}
+      </p>
     </div>
   );
 }
